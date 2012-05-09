@@ -118,8 +118,6 @@ public class WebsiteView extends JPanel implements Observer {
 
 		add(URLtextFieldBox);
 		URLtextFieldBox.setColumns(10);
-
-
 		lblTitle = new JLabel("Title:");
 		lblTitle.setBounds(10, 96, 130, 14);
 		add(lblTitle);
@@ -179,7 +177,7 @@ public class WebsiteView extends JPanel implements Observer {
 
 		// ********* DATE ACCESSED
 		JLabel lblAccess = new JLabel("Accessed(MM/DD/YYYY):");
-		lblAccess.setBounds(10, 172, 130, 14);
+		lblAccess.setBounds(10, 172, 147, 14);
 		add(lblAccess);
 
 

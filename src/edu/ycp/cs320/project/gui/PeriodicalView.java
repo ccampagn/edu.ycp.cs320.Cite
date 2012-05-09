@@ -30,11 +30,13 @@ public class PeriodicalView extends JPanel implements Observer {
 	private JTextField PublisherTextField;
 	private JLabel lblPageNumber;
 	private JLabel lblVolume;
-	private JLabel lblMagazineName;
+	private JLabel lblPeriodicalName;
 	private JTextField PageNumberTextBox;
 	private JTextField VolumeTextBox;
+	private JTextField PeriodicalNameTextBox;
 	private JTextField MagazineNameTextBox;
 	private JTextField MediumtextField;
+
 
 	public void setModel(Periodical model) {
 		this.model = model;
@@ -181,25 +183,24 @@ public class PeriodicalView extends JPanel implements Observer {
 
 
 		//************** MAGAZINE NAME
-		lblMagazineName = new JLabel("Magazine Name:");
-		lblMagazineName.setBounds(10, 196, 130, 14);
-		add(lblMagazineName);
+		lblPeriodicalName = new JLabel("Periodical Name:");
+		lblPeriodicalName.setBounds(10, 196, 130, 14);
+		add(lblPeriodicalName);
 
 
-		MagazineNameTextBox = new JTextField();
-		MagazineNameTextBox.addFocusListener(new FocusAdapter(){
+		PeriodicalNameTextBox = new JTextField();
+		PeriodicalNameTextBox.addFocusListener(new FocusAdapter(){
 			@Override
 			public void focusLost(FocusEvent e){
-				handleMagazineNameChange();
+				handlePeriodicalNameChange();
 			}
 		});
-		MagazineNameTextBox.setBounds(167, 193, 163, 20);
-		add(MagazineNameTextBox);
-		MagazineNameTextBox.setColumns(10);
-		lblMagazineName = new JLabel("Magazine Name:");
-		lblMagazineName.setBounds(10, 196, 130, 14);
-		add(lblMagazineName);
-		
+
+		PeriodicalNameTextBox.setBounds(167, 193, 163, 20);
+		add(PeriodicalNameTextBox);
+		PeriodicalNameTextBox.setColumns(10);
+	
+		//MEDIUM
 		JLabel lblMedium = new JLabel("Medium");
 		lblMedium.setBounds(10, 221, 46, 14);
 		add(lblMedium);
@@ -210,7 +211,6 @@ public class PeriodicalView extends JPanel implements Observer {
 			public void focusLost(FocusEvent e){
 				handleMediumChange();
 			}
-
 			
 		});
 		MediumtextField.setBounds(167, 218, 163, 20);
@@ -248,7 +248,7 @@ public class PeriodicalView extends JPanel implements Observer {
 		controller.setVolume(VolumeTextBox.getText());
 	}
 
-	protected void handleMagazineNameChange(){
+	protected void handlePeriodicalNameChange(){
 		controller.setMagazineName(MagazineNameTextBox.getText());
 	}
 	private void handleMediumChange() {

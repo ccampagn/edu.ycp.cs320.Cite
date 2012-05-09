@@ -8,9 +8,9 @@ private SourceType book;
 	public Book() {
 		super(SourceType.BOOK);
 	}
-	public String toString() {
-	     return city.toString();
-	}
+
+
+
 
 	public Book(String first, String last, String title, String date,
 			String publisher,String city,String medium) {
@@ -18,14 +18,12 @@ private SourceType book;
 		this.city=city;
 		
 
+
 	}
 	public String getcity(){
 		return city;
 		}
-	
-	//public String toString() {
-      //  return city.toString();
-//}
+
 	public void setcity(String city){
 		System.out.println("Setting city name to " + city);
 		this.city=city;

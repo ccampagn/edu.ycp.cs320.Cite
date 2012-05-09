@@ -129,9 +129,9 @@ public class Main {
 			citation=new Citation(source,format);
 			
 		}
-		String cit=citation.formatcit();
-		System.out.print(cit);
-		writetextfile(cit);
+		//String cit=citation.formatcit();
+		//System.out.print(cit);
+		//writetextfile(cit);
 		}
 	
 

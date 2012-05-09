@@ -162,7 +162,7 @@ public class JournalView extends JPanel implements Observer {
 			public void focusLost(FocusEvent e){
 				handlePageNumberChange();
 			}
-		});	
+		});
 		PageNumberTextBox.setBounds(167, 143, 163, 20);
 		add(PageNumberTextBox);
 		PageNumberTextBox.setColumns(10);
@@ -183,11 +183,13 @@ public class JournalView extends JPanel implements Observer {
 		VolumeTextBox.setBounds(167, 168, 163, 20);
 		add(VolumeTextBox);
 		VolumeTextBox.setColumns(10);
-		
+
 		JLabel lblMedium = new JLabel("Medium:");
-		lblMedium.setBounds(10, 221, 46, 14);
+
+		lblMedium.setBounds(10, 221, 130, 14);
+
 		add(lblMedium);
-		
+
 		MediumTextBox = new JTextField();
 		MediumTextBox.addFocusListener(new FocusAdapter(){
 			@Override
@@ -200,7 +202,6 @@ public class JournalView extends JPanel implements Observer {
 		MediumTextBox.setColumns(10);
 
 
-	
 	
 		//************** MAGAZINE NAME
 		lblMagazineName = new JLabel("Journal\r\n Name:");
@@ -222,6 +223,7 @@ public class JournalView extends JPanel implements Observer {
 		JournalNameTextBox.setColumns(10);
 
 	}
+
 
 
 
@@ -256,8 +258,9 @@ public class JournalView extends JPanel implements Observer {
 	}
 	protected void handleMediumChange() {
 		controller.setmedium(MediumTextBox.getText());
-		
+
 	}
+
 	protected void handleJournalNameChange(){
 	controller.setJournalName(JournalNameTextBox.getText());
 }

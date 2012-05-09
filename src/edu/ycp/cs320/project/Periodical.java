@@ -1,34 +1,21 @@
 package edu.ycp.cs320.project;
 
-
 public class Periodical extends Source {
 
-	public Periodical(){
-		super(SourceType.PERIODICAL);
 
-	}
-	
 private String magazine,pagenumber,volume;
 
 	public Periodical(SourceType sourceType,String first, String last, String title, String date,String publisher,String magazine, String pagenumber, String volume,String medium) {
 		super(SourceType.PERIODICAL,first, last, title, date, publisher, medium);
 
-
-
-
-
 		this.magazine=magazine;
 		this.pagenumber=pagenumber;
 		this.volume=volume;	
 	}
-		
 
-
-
-	
-	
-
-
+	public Periodical (){
+		super(SourceType.PERIODICAL);
+	}
 
 	public String getmagazine(){
 		return magazine;
